@@ -25,7 +25,7 @@ public class ScraperClient {
     public ResponseEntity<String> scrapeTeam(String teamLink) {
         log.info("Fetching details for teamLink: {}", teamLink);
         try {
-            String uri = UriComponentsBuilder.fromHttpUrl("http://localhost:3000/api/athletes/")
+            String uri = UriComponentsBuilder.fromHttpUrl("https://ncaaprs.herokuapp.com/api/athletes")
                     .queryParam("param1", teamLink)
                     .toUriString();
             log.info("Making GET request to URI: {}", uri);
